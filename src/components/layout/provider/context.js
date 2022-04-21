@@ -13,11 +13,6 @@ export default function DashboardProvider({ children }) {
     setOpen((prevState) => !prevState);
   }, []);
 
-  // set the html tag style overflow to hidden
-  React.useEffect(() => {
-    document.documentElement.style.overflow = 'hidden';
-  }, []);
-
   // close side navigation when you click on a sidenav item.
   // React.useEffect(() => {
   //   return history.listen(() => {

@@ -13,8 +13,8 @@ const ProjectDetail = () => {
 
   return (
     <div className="container mx-auto">
-      <section className="text-gray-600 body-font overflow-hidden">
-        <div className="container px-5 py-24 mx-auto">
+      <section className="text-gray-600 body-font ">
+        <div className="container px-5 py-5 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <img alt="logoProject"
               className="lg:w-1/2 w-full lg:h-auto h-64 rounded object-scale-down object-left-top

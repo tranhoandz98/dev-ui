@@ -14,7 +14,7 @@ const ApiDetail = () => {
   }, [])
 
   return (
-    <div className="flex flex-wrap -m-4 container mx-auto">
+    <div className="flex flex-wrap -m-4 container mx-auto pt-4">
       <div className="p-4 md:w-2/3">
         <header id="header" className="relative mb-2">
           <div>
