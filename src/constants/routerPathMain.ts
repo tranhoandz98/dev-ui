@@ -1,0 +1,15 @@
+export enum routerPathMain {
+    ADD ='/them-moi',
+    EDIT ='/cap-nhat',
+    UPGRADE ='/nang-cap',
+    VIEW ='/xem-chi-tiet',
+    GROUP ='/ben-tham-gia',
+    POSITION ='/dat-vi-tri',
+    NUMBERED = '/danh-so',
+    MY_DOCUMENT='/my-document',
+    CONTRACT_SIGN='/hop-dong-can-ky',
+    DOC_SIGN='/van-ban-can-ky',
+    DUPLICATE_CONTRACT='/ban-sao-hop-dong',
+    DUPLICATE_SUBMISSION='/ban-sao-van-ban',
+    END='/ket-thuc',
+}

@@ -1,0 +1,81 @@
+.page-error {
+    //full trang
+    z-index: 9999;
+    width: 100%;
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    // color: white;
+    background-size: cover;
+    .pg-white {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+    &__header {
+        font-size: 8rem;
+    }
+    &__body {
+        font-size: 2rem;
+    }
+
+    &__404 {
+        background-color: #105191;
+        // background-image: url("../../assets/images/errors/bg-404.jpg");
+        .btn-err {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+        .page_404 {
+            padding: 40px 0;
+            background: #fff;
+            height: 100vh;
+        }
+
+        .page_404 img {
+            width: 100%;
+        }
+
+        .four_zero_four_bg {
+            background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+            height: 400px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            font-size: 80px;
+        }
+
+        .four_zero_four_bg h3 {
+            font-size: 80px;
+        }
+
+        .contant_box_404 {
+            margin-top: -50px;
+        }
+    }
+
+    &__500,
+    &__403 {
+        // background-color: #b05b56;
+        background-color: var(--danger);
+        // background-image: url("../../assets/images/errors/bg-error.jpg");
+        .btn-err {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+    &__401 {
+        background-color: var(--warning);
+    }
+}
