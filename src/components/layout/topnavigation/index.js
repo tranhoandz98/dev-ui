@@ -107,7 +107,9 @@ export default function TopNavigation() {
     }
 
     const style={
-        default:`fixed top-0 w-screen border-gray-200 shadow-sm z-50 border-b border-slate-900/10 dark:border-slate-300/10  h-[4rem] bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200`
+        default:`fixed top-0 left-0  h-[4rem] w-full shadow-sm z-50 border-gray-200 border-b border-slate-900/10 dark:border-slate-300/10  bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200`,
+        // default:`sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent`,
+
     }
     return (
         <>

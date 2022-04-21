@@ -1,9 +1,6 @@
 import EmptyPage from 'components/EmptyPage'
 import React, { lazy, Suspense, useEffect } from 'react'
 
-// import 'primereact/resources/themes/tailwind-light/theme.css';
-// import 'primereact/resources/primereact.min.css';
-// import 'primeicons/primeicons.css';
 import { AppProvider } from 'context/AppProvider';
 import { ThemeProvider } from 'context/theme/ThemeContext';
 
@@ -61,6 +58,8 @@ const WrapApp = () => {
                             <ThemeProvider>
                                 <AppProvider>
                                     <AppTranslations>
+                                    <PageProgress color={"#C1282E"} height={4} className="PageProgress" />
+
                                     <ScrollToTop>
                                         <LazyApp />
                                     </ScrollToTop>

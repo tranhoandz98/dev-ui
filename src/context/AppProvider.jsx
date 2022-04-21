@@ -1,5 +1,4 @@
 import isDesktop from 'helpers/screen/isDesktop';
-import { Toast } from 'primereact/toast';
 import React, { useRef, useState } from 'react';
 import { AppContext } from './AppContext';
 
@@ -36,7 +35,6 @@ export const AppProvider = (props) => {
                 isSideBar
             }}>
             {children}
-            <Toast ref={myToast} />
         </AppContext.Provider>
     );
 };

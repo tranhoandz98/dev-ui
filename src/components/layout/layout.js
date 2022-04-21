@@ -17,17 +17,17 @@ export default function WrapLayout({ children }) {
 
   return (
     <DashboardProvider>
-      <div className={style.container}>
+      {/* <div className={style.container}>
         <div className="flex items-start">
-          <div className={style.mainContainer}>
+          <div className={style.mainContainer}> */}
             <TopNavigation />
             {isSideBar &&
               <SideNavigation mobilePosition="left" />
             }
             <Main children={children}/>
-          </div>
+          {/* </div>
         </div>
-      </div>
+      </div> */}
     </DashboardProvider>
   );
 }

@@ -9,7 +9,7 @@ const Main = ({ children }) => {
     const { open, toggle } = useToggle();
 
     const style = {
-        mainDiv: `min-h-[85.3vh] pb-10 mt-[5rem] px-2 md:pb-8 lg:px-5 w-full container mx-auto`,
+        mainDiv: `min-h-[85.3vh] pb-10 mt-[5rem] px-2 md:pb-8 lg:px-5 w-full`,
         main: `${isSideBar ? (open ? 'ml-[15rem]' : 'ml-2') : 'ml-2'} w-full min-h-screen
         flex flex-col justify-between
         `,

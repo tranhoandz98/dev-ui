@@ -12,7 +12,7 @@ const Home = () => {
   }, [])
 
   return (
-    <div className="">
+    <div className="container mx-auto">
       <section className="text-gray-600 body-font mb-10">
         <div className="">
           <h2 className="font-semibold text-xl mb-2 ">Dự án</h2>

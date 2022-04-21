@@ -1,4 +1,3 @@
-import { Button } from "primereact/button";
 import React from "react";
 
 function ErrorFallback(props) {
@@ -6,10 +5,10 @@ function ErrorFallback(props) {
     return (
         <div className="p-5">
             <h2>Something went wrong.</h2>
-            <Button onClick={() => resetErrorBoundary()}
-                className=" mb-3"
+            <button onClick={() => resetErrorBoundary()}
+                className=" mb-3 btn btn-blue"
             >Try again
-            </Button>
+            </button>
             <details style={{ whiteSpace: 'pre-wrap' }}
             >
                 {error.stack}
