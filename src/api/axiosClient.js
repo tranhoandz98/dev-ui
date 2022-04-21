@@ -1,10 +1,7 @@
 import axios from 'axios';
 import keycloak from 'keycloak';
 import queryString from 'query-string';
-import { logout } from 'redux/actions/myactions/logout';
-import { store } from 'redux/storeConfig/store';
 import Swal from 'sweetalert2';
-import { loading } from "utility/loading/Loading";
 
 // Set up default config for http requests here
 // Please have a look at here `https://github.com/axios/axios#request- config` for the full list of configs
@@ -19,7 +16,6 @@ const axiosClient = axios.create({
 });
 
 axiosClient.interceptors.request.use(async (config) => {
-  loading.runLoadingBlockUI();
   const token = keycloak.authenticated ? keycloak.token : "";
 
   if (token) {
@@ -30,7 +26,6 @@ axiosClient.interceptors.request.use(async (config) => {
 });
 
 axiosClient.interceptors.response.use((response) => {
-  loading.stopRunLoading();
   if (response && response.data) {
     return response.data;
   }
@@ -39,7 +34,6 @@ axiosClient.interceptors.response.use((response) => {
 }, (error) => {
 
   // Handle errors
-  loading.stopRunLoading();
 
   const response = error.response;
   if (response && response.status === 401) {
@@ -52,7 +46,6 @@ axiosClient.interceptors.response.use((response) => {
       });
     } else {
       keycloak.logout();
-      store.dispatch(logout());
     }
     return
   }

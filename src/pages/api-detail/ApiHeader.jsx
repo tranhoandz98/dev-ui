@@ -35,6 +35,304 @@ const ApiHeader = () => {
         { key: "abc", value: "def", description: "gdh" },
         { key: "abc", value: "def", description: "gdh" },
         { key: "abc", value: "def", description: "gdh" },
+        {
+            key: `abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    
+    `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
+        },
+        {
+            key: `abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    
+    `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
+        },
+        {
+            key: `abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    
+    `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
+        },
+        {
+            key: `abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    
+    `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
+        },
+        {
+            key: `abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    
+    `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
+        },
+        {
+            key: `abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    
+    `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
+        },
+
+        {
+            key: `abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    
+    `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
+        },
+        {
+            key: `abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    
+    `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
+        },
+        {
+            key: `abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    
+    `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
+        },
+        {
+            key: `abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    
+    `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
+        },
+        {
+            key: `abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    abc chúng ta abc chúng ta abc chúng ta
+
+    
+    `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
+        },
     ]
 
     const [rowdata, setRowData] = useState(emptyData)
@@ -71,12 +369,15 @@ const ApiHeader = () => {
 
 
     return (
-        <section className="mt-2 mb-4">
+        <section className="mt-4 mb-4">
             <h3 className="text-slate-900 tracking-tight dark:text-slate-200">
                 Header
             </h3>
-            <div className="flex justify-center mt-2">
-                <Table columns={columns} data={rowdata} showGrid
+            <div
+                className=""
+            >
+                <Table columns={columns} data={rowdata}
+                    overflowYAuto stickyHeader  
                 />
             </div>
 

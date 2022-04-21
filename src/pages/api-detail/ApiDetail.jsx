@@ -3,6 +3,7 @@ import { useApp } from 'context/AppContext';
 import React, { useEffect } from 'react'
 import ApiBody from './ApiBody';
 import ApiHeader from './ApiHeader';
+import ApiResult from './ApiResult';
 import ExampleCode from './ExampleCode'
 
 const ApiDetail = () => {
@@ -40,6 +41,7 @@ const ApiDetail = () => {
         <hr />
         <ApiHeader />
         <ApiBody />
+        <ApiResult />
       </div>
       <div className="p-4 md:w-1/3">
         <ExampleCode />

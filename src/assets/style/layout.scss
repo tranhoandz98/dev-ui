@@ -13,6 +13,15 @@
     a:hover[class~="link"] {
         border-bottom-width: 2px;
     }
+
+    .dark a[class~="link"] {
+        color: #fff;
+        border-bottom-color: #38bdf8;
+    }
+
+    hr {
+        @apply border-slate-900/10 dark:border-slate-300/10;
+    }
     h1 {
         @apply text-3xl font-extrabold tracking-wide;
     }
@@ -36,6 +45,9 @@
     .btn-red {
         @apply bg-red-600 text-white hover:bg-red-800;
     }
+    .text-danger{
+        @apply text-red-600 dark:text-red-400;
+    }
 }
 
 @tailwind utilities;
@@ -43,30 +55,22 @@
 @layer utilities {
     /* width */
     ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
+        @apply w-2 h-2 bg-transparent;
     }
 
     /* Track */
     ::-webkit-scrollbar-track {
-        background: #f1f1f1;
+        @apply bg-slate-100 rounded dark:bg-slate-500/[0.16];
     }
 
     /* Handle */
     ::-webkit-scrollbar-thumb {
-        background: #cfcfcf;
-        border-radius: 6px;
-        transition: all 1s;
+        @apply rounded bg-slate-300 hover:bg-slate-400/70  dark:bg-slate-500/50  dark:hover:bg-slate-400/70;
     }
 
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: #aaaaaa;
-    }
-    .SideBar {
+    .SideBar, .scroll-xs {
         ::-webkit-scrollbar {
-            width: 4px;
-            height: 4px;
+            @apply w-1 h-1;
         }
     }
 }
