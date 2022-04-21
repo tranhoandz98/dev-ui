@@ -5,7 +5,7 @@ import React, { Fragment } from 'react'
 
 const DropDown = ({ option, placeholder, value, onChange, isBorder, ...props }) => {
     const style = {
-        borderWrap: `${isBorder ? 'px-3 border border-inherit  py-2 hover:bg-gray-100 dark:hover:bg-gray-700' : 'px-2 hover:font-semibold'}`,
+        borderWrap: `${isBorder ? 'px-3 border border-slate-900/10 dark:border-slate-300/10 py-2 hover:bg-gray-100 dark:hover:bg-gray-700' : 'px-2 hover:font-semibold'}`,
         default: `inline-flex justify-center w-full text-sm font-medium rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75
     `
     }
@@ -33,7 +33,7 @@ const DropDown = ({ option, placeholder, value, onChange, isBorder, ...props }) 
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
             >
-                <Menu.Items className="absolute border border-inherit right-0 w-max mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-slate-900 dark:text-slate-400">
+                <Menu.Items className="absolute border border-slate-900/10 dark:border-slate-300/10 right-0 w-max mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-slate-900 dark:text-slate-400">
                     <div className="px-1 py-1 ">
                         {option.map((item, index) => {
                             return (

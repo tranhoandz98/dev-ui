@@ -27,7 +27,7 @@ const Table = ({ columns, data, updateMyData, skipPageReset, showGrid, breakAll,
       <div className="-my-2 py-2 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
         <div className="align-middle inline-block overflow-x-auto">
           <table
-            className="min-w-full divide-y divide-inherit  sm:rounded-2xl border border-inherit  "
+            className="min-w-full divide-y divide-slate-300 dark:divide-slate-600 sm:rounded-2xl border border-slate-300 dark:border-slate-600 "
             {...getTableProps()}
           >
             <thead className="bg-slate-50 dark:bg-slate-700">
@@ -47,7 +47,7 @@ const Table = ({ columns, data, updateMyData, skipPageReset, showGrid, breakAll,
               ))}
             </thead>
             <tbody
-              className="divide-y divide-inherit  "
+              className="divide-y divide-slate-300 dark:divide-slate-600 "
               {...getTableBodyProps()}
             >
               {rows.map((row, i) => {
