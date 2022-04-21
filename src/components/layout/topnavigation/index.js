@@ -106,9 +106,12 @@ export default function TopNavigation() {
         setTheme(theme === 'dark' ? 'light' : 'dark');
     }
 
+    const style={
+        default:`fixed top-0 w-screen border-gray-200 shadow-sm z-50 border-b border-slate-900/10 dark:border-slate-300/10  h-[4rem] bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200`
+    }
     return (
         <>
-            <Disclosure as="nav" className="w-screen border-gray-200 shadow-sm z-50 border-b border-slate-900/10 dark:border-slate-300/10 fixed h-[4rem] bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200">
+            <Disclosure as="nav" className={style.default}>
                 {({ open }) => (
                     <>
                         <div className=" mx-auto px-2 lg:px-5 ">

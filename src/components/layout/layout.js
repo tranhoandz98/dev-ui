@@ -12,7 +12,7 @@ export default function WrapLayout({ children }) {
   const style = {
     container: ` h-screen overflow-auto relative `,
     // mainContainer: `flex flex-col h-screen pl-0 w-full lg:pl-24 lg:space-y-4`,
-    mainContainer: `flex h-screen flex-wrap pl-0 w-screen overflow-auto `,
+    mainContainer: `flex flex-wrap pl-0 w-screen`,
   };
 
   return (
