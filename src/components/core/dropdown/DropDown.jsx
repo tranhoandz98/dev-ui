@@ -1,67 +1,79 @@
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/outline'
 import React, { Fragment } from 'react'
-
+import { Listbox } from '@headlessui/react'
+import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
 
 const DropDown = ({ option, placeholder, value, onChange, isBorder, ...props }) => {
     const style = {
         button: {
-            borderWrap: `${isBorder ? 'px-3 border border-slate-900/10 dark:border-slate-300/10 py-2 hover:bg-gray-100 dark:hover:bg-gray-700' : 'px-2 hover:font-semibold'}`,
-            default: `inline-flex z-50 justify-center w-full text-sm font-medium rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`,
+            // borderWrap: `${isBorder ? 'px-3 border border-slate-900/10 dark:border-slate-300/10 py-2 hover:bg-gray-100 dark:hover:bg-gray-700' : 'px-2 hover:font-semibold'}`,
+            borderWrap: `${isBorder ? 'py-2 pl-3 border border-slate-900/10 dark:border-slate-300/10 bg-white dark:bg-slate-900' : ''}`,
+            default: `relative w-full pr-10 text-left
+            rounded-lg cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm
+            `,
         },
         default: `relative inline-block text-left`,
         item: {
-            wrap: `z-20 absolute border border-slate-900/10 dark:border-slate-300/10 right-0 w-max mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-slate-900 dark:text-slate-400`,
-            default: `group flex rounded-md items-center w-full px-2 py-2 text-sm`,
-            active: `bg-gray-100 dark:bg-gray-700`,
-            notActive: ``,
+            wrap: `z-20 absolute  py-1 mt-1 overflow-auto text-base right-0 w-max bg-white dark:bg-slate-900 border border-slate-900/10 dark:border-slate-300/10 rounded-md max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm`,
+            default: `cursor-default select-none relative py-2 pl-10 pr-4`,
+            active: `text-slate-900 bg-slate-100 dark:hover:bg-gray-700`,
+            notActive: `text-gray-900 dark:text-slate-400`,
         }
     }
 
     return (
-        <Menu as="div" className={style.default}>
-            <div>
-                <Menu.Button className={`${style.button.default} ${style.button.borderWrap}`}>
-                    {value ?
-                        option.find(e => e.code === value)?.name
-                        : placeholder}
+        <div className="w-28">
 
-                    <ChevronDownIcon
-                        className="w-5 h-5 ml-2 -mr-1 "
-                        aria-hidden="true"
-                    />
-                </Menu.Button>
-            </div>
-            <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-            >
-                <Menu.Items className={style.item.wrap}>
-                    <div className="px-1 py-1 ">
-                        {option.map((item, index) => {
-                            return (
-                                <Menu.Item key={index}>
-                                    {({ active }) => (
-                                        <button
-                                            className={`${active ? style.item.active : style.item.notActive} ${style.item.default}`}
-                                            onClick={(e) => onChange(e, item.code)}
-                                        >
-                                            {item.name}
-                                        </button>
+            <Listbox value={value} onChange={onChange}>
+                <div className="relative mt-1">
+                    <Listbox.Button className={`${style.button.default} ${style.button.borderWrap}`}>
+                        <span className="block truncate" title={value.name ?? placeholder}>{value.name ?? placeholder}</span>
+                        <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                            <SelectorIcon
+                                className="w-5 h-5 text-gray-400"
+                                aria-hidden="true"
+                            />
+                        </span>
+                    </Listbox.Button>
+                    <Transition
+                        as={Fragment}
+                        leave="transition ease-in duration-100"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                    >
+                        <Listbox.Options className={style.item.wrap}>
+                            {option.map((item, itemInx) => (
+                                <Listbox.Option
+                                    key={itemInx}
+                                    className={({ active }) =>
+                                        `${style.item.default} ${active ? style.item.active : style.item.notActive}`
+                                    }
+                                    value={item}
+                                >
+                                    {({ selected }) => (
+                                        <>
+                                            <span
+                                                className={`block truncate ${selected ? 'font-medium' : 'font-normal'
+                                                    }`}
+                                            >
+                                                {item.name}
+                                            </span>
+                                            {selected ? (
+                                                <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-600 dark:text-slate-400">
+                                                    <CheckIcon className="w-5 h-5" aria-hidden="true" />
+                                                </span>
+                                            ) : null}
+                                        </>
                                     )}
-                                </Menu.Item>
-                            )
-                        })}
-                    </div>
-                </Menu.Items>
+                                </Listbox.Option>
+                            ))}
+                        </Listbox.Options>
+                    </Transition>
+                </div>
+            </Listbox>
+        </div>
 
-            </Transition>
-        </Menu>
     )
 }
 

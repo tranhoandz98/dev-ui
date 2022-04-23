@@ -4,7 +4,7 @@ import { ChevronDownIcon } from '@heroicons/react/outline'
 import DropDown from 'components/core/dropdown/DropDown'
 import Table from 'components/core/table/Table'
 
-const ApiResult = (props) => {
+const ApiResult = ({data}) => {
 
     const emptyVer = [
         { name: 'multipart/form-data', code: 1 },

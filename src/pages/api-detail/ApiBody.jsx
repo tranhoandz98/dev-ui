@@ -3,8 +3,9 @@ import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/outline'
 import DropDown from 'components/core/dropdown/DropDown'
 import Table from 'components/core/table/Table'
+import DropDownMenu from 'components/core/dropdown-menu/DropDownMenu'
 
-const ApiBody = (props) => {
+const ApiBody = ({data}) => {
 
     const emptyVer = [
         { name: 'multipart/form-data', code: 1 },
@@ -26,7 +27,11 @@ const ApiBody = (props) => {
                     <span className="text-danger text-xs font-medium">* required</span>
                 </div>
                 <div className="text-xs">string (255)</div>
-            </div>, description: "tên "
+            </div>, description:
+            <div>
+                <div className="font-medium">Tên</div>
+                <div className="text-xs">Mô tả là đây</div>
+            </div>
         },
         {
             name: <div>
@@ -96,11 +101,11 @@ const ApiBody = (props) => {
                     Mô tả dữ liệu
                 </h3>
                 <div>
-                    <DropDown
+                    <DropDownMenu
                         value={activeType}
                         option={listType}
                         placeholder="Loại"
-                        onChange={(e, value) => updateField(value)}
+                        onChange={(value) => updateField(value)}
                         isBorder
                     />
                 </div>

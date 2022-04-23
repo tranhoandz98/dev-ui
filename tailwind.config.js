@@ -21,7 +21,7 @@ module.exports = {
   darkMode: 'class',
   variants: {
     lineClamp: ['responsive', 'hover']
-  }
+  },
   // prefix: 'tw-',
-  // important: true,
+//   important: true,
 }

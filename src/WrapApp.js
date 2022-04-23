@@ -45,12 +45,11 @@ const WrapApp = () => {
 
     return (
 
-        <BrowserRouter>
-
-            <ErrorBoundary
-                onReset={reset}
-                FallbackComponent={ErrorFallback}
-            >
+        <ErrorBoundary
+            onReset={reset}
+            FallbackComponent={ErrorFallback}
+        >
+            <BrowserRouter>
                 <Suspense fallback={<EmptyPage />}>
                     <KeycloakProvider
                         keycloak={keycloak}>
@@ -58,11 +57,11 @@ const WrapApp = () => {
                             <ThemeProvider>
                                 <AppProvider>
                                     <AppTranslations>
-                                    <PageProgress color={"#C1282E"} height={4} className="PageProgress" />
+                                        <PageProgress color={"#C1282E"} height={4} className="PageProgress" />
 
-                                    <ScrollToTop>
-                                        <LazyApp />
-                                    </ScrollToTop>
+                                        <ScrollToTop>
+                                            <LazyApp />
+                                        </ScrollToTop>
 
                                     </AppTranslations>
                                 </AppProvider>
@@ -71,8 +70,8 @@ const WrapApp = () => {
                         </QueryClientProvider>
                     </KeycloakProvider>
                 </Suspense>
-            </ErrorBoundary>
-        </BrowserRouter >
+            </BrowserRouter >
+        </ErrorBoundary>
     )
 }
 

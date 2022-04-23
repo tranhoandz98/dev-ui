@@ -1,6 +1,6 @@
-// import { useKeycloak } from '@react-keycloak/web';
+import { useKeycloak } from '@react-keycloak/web';
 import React, {
-    //  useEffect
+     useEffect
      } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Routes } from './routes';
@@ -8,13 +8,13 @@ import { Routes } from './routes';
 
 
 const AppRouter = () => {
-    // const { keycloak } = useKeycloak();
-    // useEffect(() => {
-    //     if (!keycloak.authenticated) {
-    //         keycloak.login();
-    //     }
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [])
+    const { keycloak } = useKeycloak();
+    useEffect(() => {
+        if (!keycloak.authenticated) {
+            keycloak.login();
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     function RouteWithSubRoutes(route) {
         return (

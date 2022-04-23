@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Table from "components/core/table/Table"
 
-const ApiHeader = () => {
+const ApiHeader = ({data}) => {
     const emptyData = [
         {
             key: `abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta abc chúng ta
@@ -27,7 +27,7 @@ const ApiHeader = () => {
 
     abc chúng ta abc chúng ta abc chúng ta
 
-    
+
     `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
         },
         { key: "abc abc chúng ta", value: "def", description: "gdh" },
@@ -59,7 +59,7 @@ const ApiHeader = () => {
 
     abc chúng ta abc chúng ta abc chúng ta
 
-    
+
     `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
         },
         {
@@ -86,7 +86,7 @@ const ApiHeader = () => {
 
     abc chúng ta abc chúng ta abc chúng ta
 
-    
+
     `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
         },
         {
@@ -113,7 +113,7 @@ const ApiHeader = () => {
 
     abc chúng ta abc chúng ta abc chúng ta
 
-    
+
     `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
         },
         {
@@ -140,7 +140,7 @@ const ApiHeader = () => {
 
     abc chúng ta abc chúng ta abc chúng ta
 
-    
+
     `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
         },
         {
@@ -167,7 +167,7 @@ const ApiHeader = () => {
 
     abc chúng ta abc chúng ta abc chúng ta
 
-    
+
     `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
         },
         {
@@ -194,7 +194,7 @@ const ApiHeader = () => {
 
     abc chúng ta abc chúng ta abc chúng ta
 
-    
+
     `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
         },
 
@@ -222,7 +222,7 @@ const ApiHeader = () => {
 
     abc chúng ta abc chúng ta abc chúng ta
 
-    
+
     `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
         },
         {
@@ -249,7 +249,7 @@ const ApiHeader = () => {
 
     abc chúng ta abc chúng ta abc chúng ta
 
-    
+
     `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
         },
         {
@@ -276,7 +276,7 @@ const ApiHeader = () => {
 
     abc chúng ta abc chúng ta abc chúng ta
 
-    
+
     `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
         },
         {
@@ -303,7 +303,7 @@ const ApiHeader = () => {
 
     abc chúng ta abc chúng ta abc chúng ta
 
-    
+
     `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
         },
         {
@@ -330,7 +330,7 @@ const ApiHeader = () => {
 
     abc chúng ta abc chúng ta abc chúng ta
 
-    
+
     `, value: "def abc chúng ta abc chúng ta abc chúng ta", description: "gdh abc chúng ta abc chúng ta "
         },
     ]
@@ -377,7 +377,7 @@ const ApiHeader = () => {
                 className=""
             >
                 <Table columns={columns} data={rowdata}
-                    overflowYAuto stickyHeader  
+                    overflowYAuto stickyHeader
                 />
             </div>
 

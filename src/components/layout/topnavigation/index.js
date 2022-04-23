@@ -8,9 +8,16 @@ import { routerMain } from 'constants/routerMain';
 import { Link, useLocation } from 'react-router-dom'
 import React, { useContext } from 'react';
 import { ThemeContext } from 'context/theme/ThemeContext';
+import useStore from 'app/store';
+import { useKeycloak } from '@react-keycloak/web';
 
 export default function TopNavigation() {
     const { pathname } = useLocation();
+
+    const userPer = useStore(state => state.userData)
+    const unsetAuthData = useStore(state => state.unsetAuthData)
+
+    const { keycloak } = useKeycloak()
 
     const data = [
         {
@@ -107,7 +114,13 @@ export default function TopNavigation() {
     }
 
     const style={
-        default:`fixed top-0 left-0  h-[4rem] w-full shadow-sm z-50 border-gray-200 border-b border-slate-900/10 dark:border-slate-300/10  bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200`,
+        default:`fixed top-0 left-0  h-[4rem] w-full shadow-sm z-50 border-b border-slate-900/10 dark:border-slate-300/10  bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200`,
+    }
+
+    const logOut = (e) => {
+        e.preventDefault();
+        keycloak.logout();
+        unsetAuthData();
     }
     return (
         <>
@@ -260,7 +273,7 @@ export default function TopNavigation() {
                                                             <Menu.Item key={index}>
                                                                 {({ active }) => (
                                                                     <>
-                                                                        <div className={`border-t relative solid border-gray-700 p-4 flex 2xl:items-start w-full hover:bg-gray-200 dark:hover:bg-gray-700 ${itemN.isRead === 1 ? '' : 'opacity-70'}`}
+                                                                        <div className={`border-t relative solid p-4 flex 2xl:items-start w-full hover:bg-gray-200 dark:hover:bg-gray-700 border-slate-900/10 dark:border-slate-300/10 ${itemN.isRead === 1 ? '' : 'opacity-70'}`}
                                                                             onMouseEnter={(event) => onMouseEnterRowNotify(event, itemN)}
                                                                             onMouseLeave={(event) => onMouseLeaveRowNotify(event, itemN)}
                                                                         >
@@ -335,9 +348,9 @@ export default function TopNavigation() {
                                         <div>
                                             <Menu.Button className="ring-2 p-[0.05rem] ring-sky-300 dark:ring-sky-500 flex rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-sky-600 focus:ring-white ">
                                                 <span className="sr-only">Open user menu</span>
-                                                <div className="h-8 w-8 rounded-full text-xl bg-blue-500 text-white">
+                                                <div className="h-7 w-7 rounded-full text-xl bg-blue-500 text-white">
                                                     {
-                                                        'string'.charAt(0)
+                                                        userPer?.data?.full_name.charAt(0) ??'S'
                                                     }
                                                 </div>
                                             </Menu.Button>
@@ -351,11 +364,11 @@ export default function TopNavigation() {
                                             leaveFrom="transform opacity-100 scale-100"
                                             leaveTo="transform opacity-0 scale-95"
                                         >
-                                            <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-slate-900 dark:text-slate-400 ">
+                                            <Menu.Items className="origin-top-right absolute right-0 w-max mt-2 min-w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-slate-900 dark:text-slate-400 ">
 
                                                 <div className="py-3 px-4">
-                                                    <span className="block text-sm ">Bonnie Green</span>
-                                                    <span className="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+                                                    <span className="block text-sm ">{userPer?.data?.full_name}</span>
+                                                    <span className="block text-sm font-medium text-gray-500 truncate dark:text-gray-400" title={userPer?.data?.email}>{userPer?.data?.email}</span>
                                                 </div>
                                                 <hr />
                                                 <Menu.Item>
@@ -380,12 +393,12 @@ export default function TopNavigation() {
                                                 </Menu.Item>
                                                 <Menu.Item>
                                                     {({ active }) => (
-                                                        <a
-                                                            href="/"
+                                                        <span
                                                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm dark:hover:bg-gray-700')}
+                                                            onClick={(e) => logOut(e)}
                                                         >
                                                             Sign out
-                                                        </a>
+                                                        </span>
                                                     )}
                                                 </Menu.Item>
                                             </Menu.Items>

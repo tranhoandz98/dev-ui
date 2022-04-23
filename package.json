@@ -18,6 +18,7 @@
     "react-dom": "^17.0.2",
     "react-error-boundary": "^3.1.4",
     "react-hook-form": "^7.28.0",
+    "react-hot-toast": "^2.2.0",
     "react-icons": "^4.3.1",
     "react-intl": "^5.23.0",
     "react-page-progress": "^1.1.1",
@@ -62,13 +63,13 @@
     ]
   },
   "devDependencies": {
+    "@headlessui/react": "^1.5.0",
+    "@heroicons/react": "^1.0.6",
     "@tailwindcss/forms": "^0.5.0",
     "@tailwindcss/line-clamp": "^0.3.1",
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.23",
-    "@headlessui/react": "^1.5.0",
-    "@heroicons/react": "^1.0.6"
+    "tailwindcss": "^3.0.23"
   }
 }
